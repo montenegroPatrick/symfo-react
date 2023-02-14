@@ -29,7 +29,7 @@ const user = {
 const [firstName, login] = [user.firstName, user.login];
 
 const name = firstName;
-console.log(name)
+console.log(name);
 
 
 

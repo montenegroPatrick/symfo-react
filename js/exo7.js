@@ -13,7 +13,6 @@ Cette fonction prend comme argument un objet qui représente l'utilisateur, et d
 
 Note: pas de test ici
 */
-
 const user = {
   country: 'France',
   firstName: 'Pierre',
@@ -24,4 +23,15 @@ const user = {
   age: '32',
   lang: 'fr',
 };
+
+function sayHelloToUser (obj)  {
+
+const {firstName, lastName} = obj;
+
+ console.log(`hello ${firstName} ${lastName}`)
+}
+
+// user.sayHelloToUser = sayHelloToUser
+
+console.log(sayHelloToUser(user));
 
