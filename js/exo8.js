@@ -18,5 +18,22 @@ Notions
 - JS : portée de variable / closure / currying
 */
 
-const whiteButton = document.getElementById('white');
-const pinkButton = document.getElementById('pink');
+const whiteButton = document.getElementById("white");
+const pinkButton = document.getElementById("pink");
+
+const applyColor = (event) => {
+  const btnClicked = event.currentTarget;
+  const active = document.querySelector(".selected");
+  console.log(btnClicked.id);
+  console.log(active);
+  if (active !== null) {
+    active.classList.remove("selected");
+    btnClicked.classList.add("selected");
+  } else {
+    btnClicked.classList.remove("selected");
+    active.classList.add("selected");
+  }
+  document.body.style.backgroundColor = btnClicked.id;
+};
+whiteButton.addEventListener("click", applyColor);
+pinkButton.addEventListener("click", applyColor);
