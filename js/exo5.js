@@ -41,8 +41,8 @@ const animaux = [
   }
 ];
 
-
-
+const [canard, chat, lion, mouton] = [...animaux];
+console.log(canard)
 
 
 
