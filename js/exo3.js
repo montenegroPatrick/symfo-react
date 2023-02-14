@@ -60,7 +60,26 @@ const users = [
   },
 ];
 
-const allowedUsers = users;
+
+
+
+
+const allowedUsers = users.filter((user) => {
+//- Avoir au moins 18 ans;
+const major = user.age >= 18;
+//- Avoir au moins 20€ en poche;
+const minMoney = user.cash >= 20;
+//- Si on n'a pas 18 ans, avoir 500€ en poche pour corrompre le videur
+const bigMoney = user.cash >= 500;
+if(bigMoney) {
+  return bigMoney && minMoney;
+} 
+return major && minMoney
+
+})
+ 
+console.log(allowedUsers);
+
 
 
 
