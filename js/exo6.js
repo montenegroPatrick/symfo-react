@@ -26,6 +26,10 @@ const user = {
   age: '32',
   lang: 'fr',
 };
+const [firstName, login] = [user.firstName, user.login];
+
+const name = firstName;
+console.log(name)
 
 
 
