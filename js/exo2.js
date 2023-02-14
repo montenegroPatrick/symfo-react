@@ -44,7 +44,13 @@ const data = [
   },
 ];
 
-const characters = data.map(/* ... */);
+const characters = data.map((item) => {
+  return{
+    name: `${item.firstname} ${item.lastname}`,
+    young: item.age < 50,
+  }
+
+});
 
 
 
